@@ -1,11 +1,11 @@
-# <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Film%20Projector.png" alt="Film Projector" width="50" height="50" /> 4Cinephile
+# <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Film%20Projector.png" alt="Film Projector" width="30" height="30" /> 4Cinephile
 
 **4Cinephile** is a modern web platform that enhances movie discovery and the cinema experience. It combines intelligent movie recommendations, cinema management, user roles, and admin control in a single seamless application built with **Next.js**, **Machine Learning**, and modern UI/UX frameworks.
 
 
 ---
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Pen.png" alt="Pen" width="50" height="50" /> Features
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Pen.png" alt="Pen" width="30" height="30" /> Features
 
 -  **Movie Search & Recommendation** based on user history (Content-Based Recommendation System is implemented in the Backend)
 -  **Role-based Access Control**: Admin, User, Cinemanager
@@ -20,7 +20,22 @@
 
 ---
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" alt="Hammer and Wrench" width="50" height="50" /> Tech Stack
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Pushpin.png" alt="Pushpin" width="30" height="30" /> Installation
+
+```bash
+git clone https://github.com/dishamodi0910/4Cinephile
+cd 4cinephile
+
+npm install
+
+cp .env.example .env
+
+npm run dev
+```
+
+--- 
+
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" alt="Hammer and Wrench" width="30" height="30" /> Tech Stack
 
 | Layer         | Technologies                                  |
 |--------------|-----------------------------------------------|
@@ -37,7 +52,7 @@
 
 ---
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Camera.png" alt="Camera with Flash" width="50" height="50" /> Screenshots
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Camera.png" alt="Camera with Flash" width="30" height="30" /> Screenshots
 
 ![image](https://github.com/user-attachments/assets/be1f5e8b-6fcd-4f3c-a360-8a0491cd7acf)
 
@@ -64,4 +79,7 @@
 ![image](https://github.com/user-attachments/assets/b78236c2-5d73-41c7-bcbc-e0b73a00d27b)
 
 ---
+
+
+
 
