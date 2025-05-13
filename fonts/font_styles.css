@@ -1,0 +1,14 @@
+@font-face{
+    font-family: "Ambidexter";
+    src : url("./Ambidexter/Ambidexter_Regular.otf");
+}
+
+@font-face {
+    font-family: "LibreBaskerVille";
+    src: url("./LibreBaskerville/LibreBaskerville-Regular.ttf");
+}
+
+@font-face {
+    font-family: "BriemHand";
+    src: url("./BriemHand/BriemHand-VariableFont_wght.ttf");
+}

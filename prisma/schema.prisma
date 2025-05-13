@@ -1,0 +1,124 @@
+// prisma/schema.prisma
+generator client{
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url  	    = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Account {
+  id                 String  @id @default(cuid())
+  userId             String
+  type               String
+  provider           String
+  providerAccountId  String
+  refresh_token      String?  @db.Text
+  access_token       String?  @db.Text
+  expires_at         Int?
+  token_type         String?
+  scope              String?
+  id_token           String?  @db.Text
+  session_state      String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+enum UserRole{
+  USER
+  ADMIN
+  CINEMANAGER
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  password      String? //We keep optional as there is no password in OAuth provider.
+  role          UserRole @default(USER)
+  accounts      Account[]
+}
+
+model UserExtraDetails{
+  id String @id @default(cuid())
+  favourite_genre String
+  city String
+  state String
+  country String
+}
+
+model VerificationToken{
+  id String @id @default(cuid())
+  email String
+  token String @unique
+  expires DateTime
+
+  @@unique([email,token])
+}
+
+model ResetPasswordToken{
+  id String @id @default(cuid())
+  email String
+  token String @unique
+  expires DateTime
+
+  @@unique([email,token])
+}
+
+model Category{
+  id String @id @default(cuid())
+  categoryname String
+  category_description String
+  last_edited DateTime
+  movies_in_category String[]
+}
+
+
+model Post {
+  id String @id @default(cuid())
+  createdAt  DateTime   @default(now())
+  post_title      String
+  post_image_url String
+  post_url String
+  post_description String
+  publisher_email     String       
+  categories String
+  number_of_likes Int 
+  number_of_dislikes Int
+}
+
+model SearchHistoryDB{
+  id String @id @default(cuid())
+  user_id String
+  movies_searched String[]
+}
+
+
+model Cinema{
+  id String @id @default(cuid())
+  name_of_cinema String
+  address_of_cinema String
+  city_of_cinema String
+  country_of_cinema String
+  tagline_of_cinema String
+  name_of_owner String
+  aadhar_number_of_owner String
+  pan_number_of_owner String
+  isCinemaVerified DateTime? 
+  registeredBy String
+}
+
+model CinemaTickets{
+  id String @id @default(cuid())
+  cinemaId String
+  number_of_tickets_available Int
+  date DateTime @default(now())
+  movieName String
+  moviePost String
+}
